@@ -1,0 +1,178 @@
+[
+  {
+    "id": "interceptedRequest460",
+    "browserRequestId": "35900.2482",
+    "routeId": "1674541599863-1404",
+    "request": {
+      "headers": {
+        "host": "api.personalpropertyregistry.lra.gov.ph",
+        "connection": "keep-alive",
+        "accept": "application/json, text/plain, */*",
+        "cognito-token": "eyJraWQiOiJJaFwvanJNSW9rc05jUG9OZFFaVytlcWNoV1wvNEd0VzdaQ1ZDbUNKWDlIUEE9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiJjOTMyNTQwOC0xNDU3LTQyNjgtOTFlMi0xY2JkZGIzYmI0YWMiLCJjb2duaXRvOmdyb3VwcyI6WyJKdXJpZGljYWwiXSwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLmFwLXNvdXRoZWFzdC0xLmFtYXpvbmF3cy5jb21cL2FwLXNvdXRoZWFzdC0xX2o4cmF5ZmNNYiIsImNsaWVudF9pZCI6IjIxZjdtNG82am1kczNqNTFvYWZncGx0ZjhvIiwiZXZlbnRfaWQiOiJkYTliODg4NS01YmYyLTRlMDEtYTRmYy01MWJiNjVhYWY5MWUiLCJ0b2tlbl91c2UiOiJhY2Nlc3MiLCJzY29wZSI6ImF3cy5jb2duaXRvLnNpZ25pbi51c2VyLmFkbWluIiwiYXV0aF90aW1lIjoxNjc0NTQxNDk4LCJleHAiOjE2NzQ1NDUwOTgsImlhdCI6MTY3NDU0MTQ5OCwianRpIjoiNTRkNTFiMmMtOGJjNS00YmNiLWE0MDEtMmVmNmYzMmJlZmQ3IiwidXNlcm5hbWUiOiJnYWxhZHJpZWwwMSJ9.n7LGQKIUKeCCdSD-Mq1CAngZA_icPZUch1GhVihz97zKpvYqOxOMNZEhgFOXnMf_0RUtO1rX1wrBIsL1T5LzUS5To59CvxEIZ3V2iexu3wKEAJY1TR1HT_fJILoRjwjac9R2bpCWv8QEJ8NuMohKbRKYByv8M-7mLjufWJpQ_A8XVUvkOw3biJCIK5QqW71mjyskNbOhdZGXKRlWpq9SHuGa8kQbPRziBHxnksaCv76ZTiFuB6QPqwzw10RiYIDbF8kirNHLJs43M3_7qqgT-V3LTzoHExkknFnQ-tYXCapCb2KTE3ZCwxPjn9PFEEyckxX4Ulf16nEBL09F_IhUYQ",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+        "canceltoken": "[object Object]",
+        "sec-ch-ua": "\"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"Windows\"",
+        "service": "notice",
+        "sec-fetch-site": "cross-site",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-dest": "empty",
+        "referer": "https://lares-frontend-qa.apps.bcstechnology.com.au/",
+        "accept-encoding": "gzip, deflate, br",
+        "accept-language": "en-US,en;q=0.9"
+      },
+      "url": "https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-by-criteria?status=ACTIVE&pageNumber=1&pageSize=5&isTotalCountRequired=true",
+      "method": "GET",
+      "httpVersion": "1.1",
+      "resourceType": "xhr",
+      "query": {
+        "status": "ACTIVE",
+        "pageNumber": "1",
+        "pageSize": "5",
+        "isTotalCountRequired": "true"
+      },
+      "body": "",
+      "responseTimeout": 30000
+    },
+    "state": "Complete",
+    "requestWaited": true,
+    "responseWaited": true,
+    "subscriptions": [],
+    "response": {
+      "headers": {
+        "date": "Tue, 24 Jan 2023 06:26:42 GMT",
+        "content-type": "application/json",
+        "content-length": "2770",
+        "connection": "keep-alive",
+        "x-amzn-requestid": "0f0fe0fe-29b5-4b24-98b9-ed96b095459f",
+        "access-control-allow-origin": "*",
+        "access-control-allow-headers": "*",
+        "x-amz-apigw-id": "fPAFZFQ5SQ0FrJA=",
+        "access-control-allow-methods": "GET,OPTIONS",
+        "x-amzn-trace-id": "Root=1-63cf7a22-47bda0871533f9cd1361d821;Sampled=0"
+      },
+      "url": "https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-by-criteria?status=ACTIVE&pageNumber=1&pageSize=5&isTotalCountRequired=true",
+      "method": null,
+      "httpVersion": "1.1",
+      "statusCode": 200,
+      "statusMessage": "OK",
+      "body": {
+        "results": [
+          {
+            "noticeType": "AMENDMENT_NOTICE_REGISTRATION",
+            "transactionId": "2301000020692",
+            "noticeRegistrationId": "N230100019926",
+            "registrationDate": "2023-01-24T06:26:30.633Z",
+            "termStartDate": null,
+            "termEndDate": "2023-12-31T15:59:59Z",
+            "status": "ACTIVE",
+            "relatedNotices": [
+              {
+                "noticeType": "INITIAL_NOTICE_REGISTRATION",
+                "transactionId": "2301000020691",
+                "noticeRegistrationId": "N230100019925",
+                "registrationDate": "2023-01-24T06:25:56.818Z",
+                "status": "ACTIVE"
+              },
+              {
+                "noticeType": "AMENDMENT_NOTICE_REGISTRATION",
+                "transactionId": "2301000020692",
+                "noticeRegistrationId": "N230100019926",
+                "registrationDate": "2023-01-24T06:26:30.633Z",
+                "status": "ACTIVE"
+              }
+            ]
+          },
+          {
+            "noticeType": "AMENDMENT_NOTICE_REGISTRATION",
+            "transactionId": "2301000020690",
+            "noticeRegistrationId": "N230100019924",
+            "registrationDate": "2023-01-24T06:23:01.587Z",
+            "termStartDate": null,
+            "termEndDate": "2023-12-31T15:59:59Z",
+            "status": "ACTIVE",
+            "relatedNotices": [
+              {
+                "noticeType": "INITIAL_NOTICE_REGISTRATION",
+                "transactionId": "2301000020689",
+                "noticeRegistrationId": "N230100019923",
+                "registrationDate": "2023-01-24T06:22:27.828Z",
+                "status": "ACTIVE"
+              },
+              {
+                "noticeType": "AMENDMENT_NOTICE_REGISTRATION",
+                "transactionId": "2301000020690",
+                "noticeRegistrationId": "N230100019924",
+                "registrationDate": "2023-01-24T06:23:01.587Z",
+                "status": "ACTIVE"
+              }
+            ]
+          },
+          {
+            "noticeType": "AMENDMENT_NOTICE_REGISTRATION",
+            "transactionId": "2301000020688",
+            "noticeRegistrationId": "N230100019922",
+            "registrationDate": "2023-01-24T06:19:51.735Z",
+            "termStartDate": null,
+            "termEndDate": "2023-12-31T15:59:59Z",
+            "status": "ACTIVE",
+            "relatedNotices": [
+              {
+                "noticeType": "INITIAL_NOTICE_REGISTRATION",
+                "transactionId": "2301000020687",
+                "noticeRegistrationId": "N230100019921",
+                "registrationDate": "2023-01-24T06:19:20.724Z",
+                "status": "ACTIVE"
+              },
+              {
+                "noticeType": "AMENDMENT_NOTICE_REGISTRATION",
+                "transactionId": "2301000020688",
+                "noticeRegistrationId": "N230100019922",
+                "registrationDate": "2023-01-24T06:19:51.735Z",
+                "status": "ACTIVE"
+              }
+            ]
+          },
+          {
+            "noticeType": "INITIAL_NOTICE_REGISTRATION",
+            "transactionId": "2301000020686",
+            "noticeRegistrationId": "N230100019920",
+            "registrationDate": "2023-01-24T06:17:25.700Z",
+            "termStartDate": null,
+            "termEndDate": "2023-12-31T15:59:59Z",
+            "status": "ACTIVE",
+            "relatedNotices": [
+              {
+                "noticeType": "INITIAL_NOTICE_REGISTRATION",
+                "transactionId": "2301000020686",
+                "noticeRegistrationId": "N230100019920",
+                "registrationDate": "2023-01-24T06:17:25.700Z",
+                "status": "ACTIVE"
+              }
+            ]
+          },
+          {
+            "noticeType": "INITIAL_NOTICE_REGISTRATION",
+            "transactionId": "2301000020564",
+            "noticeRegistrationId": "N230100019825",
+            "registrationDate": "2023-01-17T05:12:00.587Z",
+            "termStartDate": null,
+            "termEndDate": "2023-12-31T15:59:59Z",
+            "status": "ACTIVE",
+            "relatedNotices": [
+              {
+                "noticeType": "INITIAL_NOTICE_REGISTRATION",
+                "transactionId": "2301000020564",
+                "noticeRegistrationId": "N230100019825",
+                "registrationDate": "2023-01-17T05:12:00.587Z",
+                "status": "ACTIVE"
+              }
+            ]
+          }
+        ],
+        "countOfResults": 49
+      }
+    }
+  }
+]
