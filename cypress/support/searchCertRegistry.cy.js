@@ -3,9 +3,9 @@ import { lraTransaction } from "./lraTransactionProcess.cy";
 export function searchCertReg() {
     const testdata = new testData();
 
-    cy.contains('Search the Registry').click();
-    cy.contains('Proceed').click();
-    cy.contains('Transaction History').click();
+   // cy.contains('Search the Registry').click();
+  //  cy.contains('Proceed').click();
+   // cy.contains('Transaction History').click();
 
     cy.xpath(testdata.searchRegistry).click();
 

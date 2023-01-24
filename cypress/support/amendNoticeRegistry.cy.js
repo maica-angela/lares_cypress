@@ -2,6 +2,25 @@ import { lraTransaction } from "./lraTransactionProcess.cy";
 
 export function amendNoticeReg() {
 
+    const testdata = new testData();
+
+    cy.contains('Search the Registry').click();
+    cy.contains('Proceed').click();
+    cy.contains('Transaction History').click();
+
+    //  cy.xpath(testdata.searchRegistry).click();
+
+    cy.xpath(testdata.process).click({ force: true });
+    cy.contains('Processed').click();
+    cy.wait(5000);
+    cy.xpath(testdata.a).click({ force: true });
+    cy.get('span.multiselect__option').eq(1).should('have.text', 'Search').click({ force: true });
+    cy.xpath(testdata.find).click({ force: true });
+
+    cy.xpath(testdata.firstView).click({ force: true });
+    cy.wait(3000);
+
+    cy.contains('Amend').click();
     cy.xpath(testdata.clickAmend).click({ force: true });
     cy.contains('Proceed').click();
     cy.contains('Amend').click();
@@ -59,6 +78,7 @@ export function amendNoticeReg() {
 
 
 class testData {
+    process = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[1]/div[2]/div/div/div/div[2]/span';
     a = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[1]/div[2]/div[2]/div/input';
     b = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[2]/div/div[1]/div/input';
     c = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[2]/div/div[2]/div/input';

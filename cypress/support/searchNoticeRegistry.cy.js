@@ -26,7 +26,7 @@ export function searchNoticeReg() {
      cy.contains('Proceed').click();
      cy.xpath(testdata.e).click();
  
-     cy.xpath(testdata.f).type('N230100019850');
+     cy.xpath(testdata.f).type('N230100019915');
      cy.xpath(testdata.searchReg).click();
      cy.wait(5000);
     lraTransaction();
