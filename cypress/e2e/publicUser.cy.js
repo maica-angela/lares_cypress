@@ -14,7 +14,7 @@ describe('Given that I logged in on Public User ', () => {
     const signin = new login();
     cy.visit(site1.qa)
 
-    // registerInd();
+    // registerInd(); test
     //   registerJuri();
     //  forgotPassword();
 
