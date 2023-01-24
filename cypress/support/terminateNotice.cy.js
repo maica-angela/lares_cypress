@@ -21,17 +21,17 @@ export function terminateNoticePub() {
 
     let dataList = [];
     cy.wait('@getnotices', { timeout: 15000 }).then((response) => {
-       // expect(response).property('body').to.equal(200)
+        // expect(response).property('body').to.equal(200)
         dataList = [response]
-       // cy.wrap(response.noticeRegistrationId).as('results')
+        // cy.wrap(response.noticeRegistrationId).as('results')
         cy.writeFile('C:/Cypress/cypress/fixtures/searchbycriteria.json', dataList)
     })
 
     cy.fixture('searchbycriteria.json').then((id) => {
         cy.intercept('GET', 'searchbycriteria.json')
-        var noticeId =  id.noticeRegistrationId
+        var noticeId = id.noticeRegistrationId
         cy.log(noticeId);
-     //   cy.xpath('//*[@id="__layout"]/section/main/div/div/div[1]/form/div[2]/div[3]/div/div/input').
+        //   cy.xpath('//*[@id="__layout"]/section/main/div/div/div[1]/form/div[2]/div[3]/div/div/input').
         //    type(noticeId);
     })
 
