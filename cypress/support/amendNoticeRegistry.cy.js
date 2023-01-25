@@ -89,7 +89,7 @@ class testData {
     b = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[2]/div/div[1]/div/input';
     c = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[2]/div/div[2]/div/input';
     d = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[2]/div/div[3]/div/input';
-    e = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[1]/div/div[1]/div[1]/div/input';
+    e = '//*[@id="__layout"]/section/main/div/div/div[1]/div[1]/div[2]/label/span[1]';
     f = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[2]/div/div[1]/div[1]/div/input';
     g = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[2]/div/div[1]/div[2]/div[2]/input';
     h = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[2]/div/div[2]/div/div[2]/input';
