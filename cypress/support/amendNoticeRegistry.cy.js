@@ -8,7 +8,7 @@ export function amendNoticeReg() {
     cy.contains('Search the Registry').click();
     cy.contains('Proceed').click();
     cy.contains('Search Notice').click();
-  //  cy.contains('Proceed').click();
+    //  cy.contains('Proceed').click();
     cy.xpath(testdata.e).click();
 
     cy.xpath(testdata.f).type('N230100019915');
@@ -23,8 +23,8 @@ export function amendNoticeReg() {
     cy.get('span.multiselect__option').eq(1).should('have.text', 'Search').click({ force: true });
     cy.xpath(testdata.find).click({ force: true });
 
-    //cy.xpath(testdata.firstView).click({ force: true });
-    //  cy.wait(3000);
+    cy.xpath(testdata.firstView).click({ force: true });
+    cy.wait(3000);
 
     cy.contains('Amend').click();
     cy.xpath(testdata.clickAmend).click({ force: true });
@@ -73,11 +73,7 @@ export function amendNoticeReg() {
         .click();
     cy.contains('Confirm').click();
     cy.wait(3000);
-    //  cy.contains('Preview Assessment Details').click();
-    //  cy.xpath(testdata.download1);
-    // cy.wait(5000);
-    //cy.xpath(testdata.close1);
-    // cy.wait(3000);
+
 
     lraTransaction();
 }
