@@ -16,7 +16,7 @@ describe('Given that I login to Registry User ', () => {
     cy.get(signin.password).type(signin.password1);
     cy.wait(30000);
     cy.get(signin.submit).click();
-    cy.wait(5000);
+    cy.wait(7000);
 
    // searchNoticeReg();
     // searchCertReg();

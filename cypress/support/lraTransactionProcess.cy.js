@@ -27,7 +27,7 @@ export function lraTransaction() {
         //  middleware: true
     }).as('transactionNumber');
 
-    cy.wait(10000);
+    cy.wait(80000);
 
     cy.xpath(testdata.okay).click();
 

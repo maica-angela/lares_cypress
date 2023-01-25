@@ -84,13 +84,14 @@ export function amendNoticeReg() {
 
 
 class testData {
+    searchReg = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[2]/div/div/button';
     process = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[1]/div[2]/div/div/div/div[2]/span';
-    a = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[1]/div[2]/div[2]/div/input';
+    a = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[1]/div[1]/div/div/div/div[1]';
     b = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[2]/div/div[1]/div/input';
     c = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[2]/div/div[2]/div/input';
     d = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[2]/div/div[3]/div/input';
     e = '//*[@id="__layout"]/section/main/div/div/div[1]/div[1]/div[2]/label/span[1]';
-    f = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[2]/div/div[1]/div[1]/div/input';
+    f = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[1]/div/div';
     g = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[2]/div/div[1]/div[2]/div[2]/input';
     h = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[2]/div/div[2]/div/div[2]/input';
     j = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[1]/div/div[1]/div[2]/div[2]/div/input';
