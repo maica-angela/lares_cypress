@@ -24,7 +24,7 @@ export function amendNoticeReg() {
     cy.xpath(testdata.find).click({ force: true });
 
     cy.xpath(testdata.firstView).click({ force: true });
-    cy.wait(3000);
+    cy.wait(3000);//
 
     cy.contains('Amend').click();
     cy.xpath(testdata.clickAmend).click({ force: true });
