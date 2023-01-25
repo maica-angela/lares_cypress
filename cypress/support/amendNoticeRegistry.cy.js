@@ -4,12 +4,17 @@ export function amendNoticeReg() {
 
     const testdata = new testData();
 
+    //search by Notice Registration
     cy.contains('Search the Registry').click();
+    cy.contains('Search Notice').click();
     cy.contains('Proceed').click();
-    cy.contains('Transaction History').click();
+    cy.xpath(testdata.e).click();
 
-    //  cy.xpath(testdata.searchRegistry).click();
+    cy.xpath(testdata.f).type('N230100019915');
+    cy.xpath(testdata.searchReg).click();
+    cy.wait(5000);
 
+    lraTransaction();
     cy.xpath(testdata.process).click({ force: true });
     cy.contains('Processed').click();
     cy.wait(5000);
@@ -17,8 +22,8 @@ export function amendNoticeReg() {
     cy.get('span.multiselect__option').eq(1).should('have.text', 'Search').click({ force: true });
     cy.xpath(testdata.find).click({ force: true });
 
-    cy.xpath(testdata.firstView).click({ force: true });
-    cy.wait(3000);
+    //cy.xpath(testdata.firstView).click({ force: true });
+    //  cy.wait(3000);
 
     cy.contains('Amend').click();
     cy.xpath(testdata.clickAmend).click({ force: true });
