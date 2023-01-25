@@ -6,8 +6,9 @@ export function amendNoticeReg() {
 
     //search by Notice Registration
     cy.contains('Search the Registry').click();
-    cy.contains('Search Notice').click();
     cy.contains('Proceed').click();
+    cy.contains('Search Notice').click();
+  //  cy.contains('Proceed').click();
     cy.xpath(testdata.e).click();
 
     cy.xpath(testdata.f).type('N230100019915');
