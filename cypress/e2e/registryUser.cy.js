@@ -18,11 +18,11 @@ describe('Given that I login to Registry User ', () => {
     cy.get(signin.submit).click();
     cy.wait(7000);
 
-   // searchNoticeReg();
+    // searchNoticeReg();
     // searchCertReg();
 
-   //  amendNoticeReg();
-      terminateNoticeReg();
+    amendNoticeReg();
+    //terminateNoticeReg();
   })
   class login {
     username = 'input[type=text]';

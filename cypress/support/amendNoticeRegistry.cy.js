@@ -6,7 +6,7 @@ export function amendNoticeReg() {
     const testdata = new testData();
     const dayjs = require('dayjs');
 
-    /*
+   
     //search by Notice Registration
     cy.contains('Search the Registry').click();
     cy.contains('Proceed').click();
@@ -14,17 +14,17 @@ export function amendNoticeReg() {
     //  cy.contains('Proceed').click();
     cy.xpath(testdata.e).click();
 
-    cy.xpath(testdata.f).type('N230100019915');
+    cy.xpath(testdata.f).type('N230100019856');
     cy.xpath(testdata.searchReg).click();
     cy.wait(5000);
 
     lraTransaction();
-*/
 
 
-    cy.contains('Search the Registry').click();
-    cy.contains('Proceed').click();
-    cy.contains('Transaction History').click();
+
+  //  cy.contains('Search the Registry').click();
+   // cy.contains('Proceed').click();
+  //  cy.contains('Transaction History').click();
     cy.xpath(testdata.searchRegistry).click();
 
     cy.xpath(testdata.process).click({ force: true });
