@@ -20,6 +20,7 @@ export function searchNoticeReg() {
 
     cy.xpath(testdata.search).click();
     lraTransaction();
+   // cy.xpath(testdata.okay).click();
 
      //search by Notice Registration
      cy.contains('Search Notice').click();
@@ -30,6 +31,7 @@ export function searchNoticeReg() {
      cy.xpath(testdata.searchReg).click();
      cy.wait(5000);
     lraTransaction();
+  //  cy.xpath(testdata.okay).click();
 
      //search by collateral details, Motor Vehicle
      cy.contains('Search Notice').click();
@@ -39,10 +41,13 @@ export function searchNoticeReg() {
      cy.xpath(testdata.searchCol).click();
      cy.wait(5000);
     lraTransaction();
+   // cy.xpath(testdata.okay).click();
+   
     searchCertReg();
 }
 
 class testData {
+    okay = '//*[@id="modalQueryPostSubmit___BV_modal_body_"]/div[2]/button';
     a = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[2]/div/div/input';
     b = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[3]/div/div/input';
     c = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[4]/div/div/input';

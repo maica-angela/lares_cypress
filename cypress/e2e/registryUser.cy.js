@@ -21,8 +21,8 @@ describe('Given that I login to Registry User ', () => {
    // searchNoticeReg();
     // searchCertReg();
 
-     amendNoticeReg();
-    //  terminateNoticeReg();
+   //  amendNoticeReg();
+      terminateNoticeReg();
   })
   class login {
     username = 'input[type=text]';

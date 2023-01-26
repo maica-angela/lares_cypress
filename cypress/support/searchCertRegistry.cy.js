@@ -3,9 +3,9 @@ import { lraTransaction } from "./lraTransactionProcess.cy";
 export function searchCertReg() {
     const testdata = new testData();
 
-   // cy.contains('Search the Registry').click();
-  //  cy.contains('Proceed').click();
-   // cy.contains('Transaction History').click();
+    // cy.contains('Search the Registry').click();
+    //  cy.contains('Proceed').click();
+    // cy.contains('Transaction History').click();
 
     cy.xpath(testdata.searchRegistry).click();
 
@@ -31,9 +31,12 @@ export function searchCertReg() {
 
     cy.wait(5000);
     lraTransaction();
+  // cy.xpath(testdata.okay).click();
+
 }
 
 class testData {
+    okay = '//*[@id="modalQueryPostSubmit___BV_modal_body_"]/div[2]/button';
 
     a = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[1]/div[1]/div/div/div/div[1]';
     b = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[1]/div[2]/div/div/div/div[2]/span';
