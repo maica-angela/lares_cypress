@@ -2,21 +2,21 @@ import { lraTransaction } from "./lraTransactionProcess.cy";
 
 export function terminateNoticeReg() {
 
-     cy.contains('My Notices').click();
+     //  cy.contains('My Notices').click();
 
-     cy.intercept({
-          method: 'GET',
-          // body: formData,
-          url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-by-criteria?status=ACTIVE&pageNumber=1&pageSize=5&isTotalCountRequired=true'
-     }).as('getnotices');
-
-     cy.fixture('searchbycriteria.json').then((id) => {
-          cy.intercept('GET', 'searchbycriteria.json')
-          var noticeId = id.noticeRegistrationId
-          cy.log(noticeId);
-          //   cy.xpath('//*[@id="__layout"]/section/main/div/div/div[1]/form/div[2]/div[3]/div/div/input').
-          //    type(noticeId);
-     })
+     //  cy.intercept({
+     //      method: 'GET',
+     //      // body: formData,
+     //       url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-by-criteria?status=ACTIVE&pageNumber=1&pageSize=5&isTotalCountRequired=true'
+     //   }).as('getnotices');
+     //
+     //    cy.fixture('searchbycriteria.json').then((id) => {
+     //         cy.intercept('GET', 'searchbycriteria.json')
+     //          var noticeId = id.noticeRegistrationId
+     //         cy.log(noticeId);
+     //   cy.xpath('//*[@id="__layout"]/section/main/div/div/div[1]/form/div[2]/div[3]/div/div/input').
+     //    type(noticeId);
+     //   })
 
      //search first active transaction
      cy.xpath('//*[@id="__layout"]/section/main/div/div/div[2]/div/div/div[2]/div/div[2]/a/span[8]/div/a[3]')
@@ -32,8 +32,9 @@ export function terminateNoticeReg() {
      cy.xpath('//*[@id="modalSummary___BV_modal_body_"]/div[2]/div/button/span')
           .click();
 
+     lraTransaction()
      cy.wait(5000);
-     cy.xpath('//*[@id="modalNoticeConfirmSubmit___BV_modal_body_"]/div[2]/button')
-          .click();
-     lraTransaction();
+     //  cy.xpath('//*[@id="modalNoticeConfirmSubmit___BV_modal_body_"]/div[2]/button')
+     //       .click();
+     //  lraTransaction();
 }

@@ -35,11 +35,12 @@ export function amendNoticeReg() {
     cy.xpath(testdata.find).click({ force: true });
 
     cy.xpath(testdata.firstView).click({ force: true });
-    cy.wait(3000);//
+    cy.wait(5000);//
 
     cy.xpath(testdata.amend).click({ force: true });
     // cy.xpath(testdata.clickAmend).click({ force: true });
     cy.contains('Proceed').click();
+    cy.wait(5000);//
     //  cy.contains('Amend').click();
     //add creditor
     cy.xpath(testdata.cardheader1).click();
@@ -53,9 +54,6 @@ export function amendNoticeReg() {
     cy.xpath(testdata.o).type('maica.urlanda@bcstechnology.com');
     cy.xpath(testdata.p).type('09169227894');
     cy.xpath(testdata.q).type('123456');
-    cy.wait(4000);
-    cy.xpath(testdata.savebutton1).click();
-
     cy.xpath(testdata.idTypeCreditor)
         .click({ force: true });
     cy.contains('Valid')
@@ -82,21 +80,24 @@ export function amendNoticeReg() {
     cy.contains('Submit').click();
     cy.contains('I acknowledge that the information provided is true and correct and I/We agree to the Terms and Conditions and Privacy Policy set by this Registry.')
         .click();
-    cy.contains('Confirm').click();
+    cy.xpath(testdata.confirm1).click();
     cy.wait(3000);
 
-
     lraTransaction();
-
     terminateNoticeReg();
 }
 
 
 class testData {
+             
+    
+     okayAmend= '//*[@id="modalNoticePostSubmit___BV_modal_body_"]/div[2]/button';
+    confirm1 = '//*[@id="modalSummary___BV_modal_body_"]/div[2]/div/button/span';
+    endDate = '//*[@id="sectionTransactions"]/div/div[3]/form/div/div[2]/div/div/div/input';
     firstView = '//*[@id="__layout"]/section/main/div/div/div[2]/div/div/div[2]/div/div[2]/a/span[6]/div/a';
     searchRegistry = '//*[@id="__layout"]/section/main/div/ul/li[2]/a';
     find = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[2]/div[3]/div/div/button';
-    endDate = '//*[@id="sectionTransactions"]/div/div[3]/form/div[2]/div[2]/div/div/div/input';
+    
     amend = '//*[@id="result-collapse"]/div/div/div[2]/span[7]/a[2]';
     searchReg = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[2]/div/div/button';
     process = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[1]/div[2]/div/div/div/div[2]/span';
@@ -155,7 +156,7 @@ class testData {
     provinceCreditor = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[1]/div/div[2]/div[1]/div/div/div[2]';
     townCreditor = '//*[@id="modalStakeholder___BV_modal_body_"]/form/div[2]/div[1]/div/div[2]/div[2]/div';
 
-    endDate = '//*[@id="sectionTransactions"]/div/div[3]/form/div[2]/div[2]/div/div/div/input';
+   
 
     confirmNotice = '//*[@id="modalSummary___BV_modal_body_"]/div[2]/div/button';
 

@@ -26,10 +26,11 @@ export function lraTransaction() {
         url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-transaction',
         //  middleware: true
     }).as('transactionNumber');
+   // 
+    cy.wait(80000);
 
-    cy.wait(100000);
-
-    cy.xpath(testdata.okay).click();
+    cy.contains('Okay').click();
+    
 
   /*  cy.wait(7000);
     cy.wait('@transactionNumber').its('response.body').then((body) => {
@@ -47,5 +48,5 @@ class testData {
     issuedDate = '//*[@id="modalAmendmentRemarks___BV_modal_body_"]/form/div[4]/div/div/div/div/div/input';
     remarks = '//*[@id="modalAmendmentRemarks___BV_modal_body_"]/form/div[5]/div/div/div/textarea';
     submit = '//*[@id="modalAmendmentRemarks___BV_modal_body_"]/form/div[8]/button/span';
-    okay = '//*[@id="modalQueryPostSubmit___BV_modal_body_"]/div[2]/button';
+   
 }
