@@ -93,7 +93,9 @@ export function amendNoticeReg() {
 
 
 class testData {
+    firstView = '//*[@id="__layout"]/section/main/div/div/div[2]/div/div/div[2]/div/div[2]/a/span[6]/div/a';
     searchRegistry = '//*[@id="__layout"]/section/main/div/ul/li[2]/a';
+    find = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[2]/div[3]/div/div/button';
     endDate = '//*[@id="sectionTransactions"]/div/div[3]/form/div[2]/div[2]/div/div/div/input';
     amend = '//*[@id="result-collapse"]/div/div/div[2]/span[7]/a[2]';
     searchReg = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[2]/div/div/button';
