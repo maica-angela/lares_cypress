@@ -14,7 +14,7 @@ describe('Given that I login to Registry User ', () => {
     cy.contains('Login').click();
     cy.get(signin.username).type(signin.username1);
     cy.get(signin.password).type(signin.password1);
-    cy.wait(30000);
+    cy.wait(50000);
     cy.get(signin.submit).click();
     cy.wait(7000);
 

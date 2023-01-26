@@ -26,10 +26,10 @@ export function amendNoticeReg() {
     cy.xpath(testdata.firstView).click({ force: true });
     cy.wait(3000);//
 
-    cy.contains('Amend').click();
-    cy.xpath(testdata.clickAmend).click({ force: true });
+    cy.xpath(testdata.amend).click({ force: true });
+    // cy.xpath(testdata.clickAmend).click({ force: true });
     cy.contains('Proceed').click();
-    cy.contains('Amend').click();
+    //  cy.contains('Amend').click();
     //add creditor
     cy.xpath(testdata.cardheader1).click();
     cy.contains('Add Creditor').click();
@@ -39,7 +39,7 @@ export function amendNoticeReg() {
     cy.xpath(testdata.l).type('test123');
     cy.xpath(testdata.m).type('test123');
     cy.xpath(testdata.n).type('test123');
-    cy.xpath(testdata.o).type('maica@yopmail.com');
+    cy.xpath(testdata.o).type('maica.urlanda@bcstechnology.com');
     cy.xpath(testdata.p).type('09169227894');
     cy.xpath(testdata.q).type('123456');
     cy.wait(4000);
@@ -64,9 +64,9 @@ export function amendNoticeReg() {
     cy.wait(5000);
 
     cy.xpath(testdata.cardheader3).click();
+    cy.log(dayjs().format('YYYY/MM/DD'))
+    cy.xpath(testdata.endDate).type(dayjs().format('YYYY/MM/DD'));
 
-    cy.contains('Save').click();
-    cy.wait(5000);
     cy.contains('I confirm that a signed security agreement is in place.').click();
     cy.contains('Submit').click();
     cy.contains('I acknowledge that the information provided is true and correct and I/We agree to the Terms and Conditions and Privacy Policy set by this Registry.')
@@ -80,6 +80,8 @@ export function amendNoticeReg() {
 
 
 class testData {
+    endDate = '//*[@id="sectionTransactions"]/div/div[3]/form/div[2]/div[2]/div/div/div/input';
+    amend = '//*[@id="result-collapse"]/div/div/div[2]/span[7]/a[2]';
     searchReg = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[2]/div/div/button';
     process = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[1]/div[2]/div/div/div/div[2]/span';
     a = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[1]/div[1]/div/div/div/div[1]';
