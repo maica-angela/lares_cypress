@@ -1,9 +1,12 @@
 import { lraTransaction } from "./lraTransactionProcess.cy";
+import { terminateNoticeReg } from "./terminateNoticeRegistry.cy";
 
 export function amendNoticeReg() {
 
     const testdata = new testData();
+    const dayjs = require('dayjs');
 
+    /*
     //search by Notice Registration
     cy.contains('Search the Registry').click();
     cy.contains('Proceed').click();
@@ -16,6 +19,14 @@ export function amendNoticeReg() {
     cy.wait(5000);
 
     lraTransaction();
+*/
+
+
+    cy.contains('Search the Registry').click();
+    cy.contains('Proceed').click();
+    cy.contains('Transaction History').click();
+    cy.xpath(testdata.searchRegistry).click();
+
     cy.xpath(testdata.process).click({ force: true });
     cy.contains('Processed').click();
     cy.wait(5000);
@@ -76,10 +87,13 @@ export function amendNoticeReg() {
 
 
     lraTransaction();
+
+    terminateNoticeReg();
 }
 
 
 class testData {
+    searchRegistry = '//*[@id="__layout"]/section/main/div/ul/li[2]/a';
     endDate = '//*[@id="sectionTransactions"]/div/div[3]/form/div[2]/div[2]/div/div/div/input';
     amend = '//*[@id="result-collapse"]/div/div/div[2]/span[7]/a[2]';
     searchReg = '//*[@id="__layout"]/section/main/div/div/div[1]/div[2]/div/form/div/div[2]/div/div/button';
