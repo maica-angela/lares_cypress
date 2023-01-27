@@ -4,6 +4,7 @@ import { checkifZero } from './checkifZerofee.cy';
 import { terminateNoticePub } from './terminateNotice.cy';
 
 export function addNotice() {
+    cy.viewport(1024, 768);
     const testdata = new testData();
     //create notice
     cy.contains('My Notices').click();
