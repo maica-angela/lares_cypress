@@ -30,9 +30,10 @@ export function amendNoticePub(element) {
     cy.xpath(testdata.o).type('maica@yopmail.com');
     cy.xpath(testdata.p).type('09169227894');
     cy.xpath(testdata.q).type('123456');
+    
     cy.xpath(testdata.idTypeCreditor)
         .click({ force: true });
-    cy.contains('Valid')
+    cy.contains('SSS')
         .click({ force: true });
 
     cy.xpath(testdata.provinceGrantor)

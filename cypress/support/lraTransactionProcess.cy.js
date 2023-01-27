@@ -19,7 +19,7 @@ export function lraTransaction() {
     cy.get('input[type="file"]').selectFile(fileUpload).trigger('input');
     //  cy.get('input[type="submit"]').click({force: true});
     // cy.get('#uploaded-files').contains('How Democracies Die - Steven Levitsky.pdf');
-    cy.xpath(testdata.submit).click();
+    cy.xpath(testdata.submit).click().as('submitLRA');
 
     cy.intercept({
         method: 'POST',
@@ -27,7 +27,7 @@ export function lraTransaction() {
         //  middleware: true
     }).as('transactionNumber');
    // 
-    cy.wait(100000);
+    cy.wait('@submitLRA');
 
     cy.contains('Okay').click();
     
