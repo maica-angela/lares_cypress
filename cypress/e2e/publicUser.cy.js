@@ -10,6 +10,7 @@ import { searchCertPublic } from '../support/searchCertspec.cy.js';
 
 describe('Given that I logged in on Public User ', () => {
   it('passes', () => {
+    cy.viewport(1024, 768);
     const site1 = new site();
     const signin = new login();
     cy.visit(site1.qa)
@@ -23,9 +24,9 @@ describe('Given that I logged in on Public User ', () => {
     cy.contains('Login').click();
     cy.get(signin.username).type(signin.username1);
     cy.get(signin.password).type(signin.password1);
-    cy.wait(30000);
+   // cy.wait(30000);
     cy.get(signin.submit).click();
-    cy.wait(10000);
+    cy.wait(20000);
 
     addNotice();
     searchNoticePub();

@@ -33,7 +33,7 @@ export function amendNoticePub(element) {
     
     cy.xpath(testdata.idTypeCreditor)
         .click({ force: true });
-    cy.contains('SSS')
+    cy.contains('Valid')
         .click({ force: true });
 
     cy.xpath(testdata.provinceGrantor)

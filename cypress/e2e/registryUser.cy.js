@@ -14,10 +14,17 @@ describe('Given that I login to Registry User ', () => {
     cy.contains('Login').click();
     cy.get(signin.username).type(signin.username1);
     cy.get(signin.password).type(signin.password1);
-    cy.wait(50000);
+  //  cy.wait(50000);
+    cy.intercept({
+      method: 'POST',
+      url: 'https://cognito-idp.ap-southeast-1.amazonaws.com/',
+      //  middleware: true
+    }).as('login');
     cy.get(signin.submit).click();
-    cy.wait(7000);
 
+    cy.wait('@login',{ timeout: 10000} );
+
+    //
     // searchNoticeReg();
     // searchCertReg();
 

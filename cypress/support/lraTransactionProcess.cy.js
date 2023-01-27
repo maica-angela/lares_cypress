@@ -19,26 +19,34 @@ export function lraTransaction() {
     cy.get('input[type="file"]').selectFile(fileUpload).trigger('input');
     //  cy.get('input[type="submit"]').click({force: true});
     // cy.get('#uploaded-files').contains('How Democracies Die - Steven Levitsky.pdf');
-    cy.xpath(testdata.submit).click().as('submitLRA');
-
     cy.intercept({
         method: 'POST',
         url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-transaction',
         //  middleware: true
-    }).as('transactionNumber');
-   // 
-    cy.wait('@submitLRA');
+    }).as('submitLRA');
+    cy.xpath(testdata.submit).click();
+
+    cy.wait('@submitLRA', { timeout: 100000 });
 
     cy.contains('Okay').click();
-    
 
-  /*  cy.wait(7000);
-    cy.wait('@transactionNumber').its('response.body').then((body) => {
-        expect(body).to.have.property('transactionId')
-        cy.wrap(body.transactionId).as('transactionNumber')
-    });
-    */
-           
+
+    //  cy.intercept({
+    //      method: 'POST',
+    //     url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-transaction',
+    //      //  middleware: true
+    // }).as('transactionNumber');
+    // 
+
+
+
+    /*  cy.wait(7000);
+      cy.wait('@transactionNumber').its('response.body').then((body) => {
+          expect(body).to.have.property('transactionId')
+          cy.wrap(body.transactionId).as('transactionNumber')
+      });
+      */
+
 }
 
 class testData {
@@ -48,5 +56,5 @@ class testData {
     issuedDate = '//*[@id="modalAmendmentRemarks___BV_modal_body_"]/form/div[4]/div/div/div/div/div/input';
     remarks = '//*[@id="modalAmendmentRemarks___BV_modal_body_"]/form/div[5]/div/div/div/textarea';
     submit = '//*[@id="modalAmendmentRemarks___BV_modal_body_"]/form/div[8]/button/span';
-   
+
 }

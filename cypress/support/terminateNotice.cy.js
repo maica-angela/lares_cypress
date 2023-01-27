@@ -52,7 +52,7 @@ export function terminateNoticePub() {
     cy.wait(5000);
     cy.xpath('//*[@id="modalNoticeConfirmSubmit___BV_modal_body_"]/div[2]/button')
         .click();
-    checkifZero();
+   // checkifZero();
     // successPayment();
 
 

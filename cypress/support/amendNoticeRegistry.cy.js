@@ -14,9 +14,8 @@ export function amendNoticeReg() {
     //  cy.contains('Proceed').click();
     cy.xpath(testdata.e).click();
 
-    cy.xpath(testdata.f).type('N230100019856');
-    cy.xpath(testdata.searchReg).click();
-    cy.wait(5000);
+    cy.xpath(testdata.f).type('N221100000019');
+    cy.xpath(testdata.searchReg).click({ timeout: 10000});
 
     lraTransaction();
 
@@ -40,7 +39,6 @@ export function amendNoticeReg() {
     cy.xpath(testdata.amend).click({ force: true });
     // cy.xpath(testdata.clickAmend).click({ force: true });
     cy.contains('Proceed').click();
-    cy.wait(5000);//
     //  cy.contains('Amend').click();
     //add creditor
     cy.xpath(testdata.cardheader1).click();
@@ -70,7 +68,6 @@ export function amendNoticeReg() {
         .click({ force: true });
     cy.wait(4000);
     cy.xpath(testdata.savebutton1).click();
-    cy.wait(5000);
 
     cy.xpath(testdata.cardheader3).click();
     cy.log(dayjs().format('YYYY/MM/DD'))
@@ -92,7 +89,7 @@ class testData {
              
     
      okayAmend= '//*[@id="modalNoticePostSubmit___BV_modal_body_"]/div[2]/button';
-    confirm1 = '//*[@id="modalSummary___BV_modal_body_"]/div[2]/div/button/span';
+    confirm1 = '//*[@id="sectionTransactions"]/div/div[3]/form/div/div[2]/div/div[1]/div/input';
     endDate = '//*[@id="sectionTransactions"]/div/div[3]/form/div/div[2]/div/div/div/input';
     firstView = '//*[@id="__layout"]/section/main/div/div/div[2]/div/div/div[2]/div/div[2]/a/span[6]/div/a';
     searchRegistry = '//*[@id="__layout"]/section/main/div/ul/li[2]/a';
