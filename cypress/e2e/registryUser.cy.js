@@ -7,6 +7,7 @@ import { terminateNoticeReg } from '../support/terminateNoticeRegistry.cy';
 
 describe('Given that I login to Registry User ', () => {
   it('passes', () => {
+    cy.viewport(1024, 768);
     const site1 = new site();
     const signin = new login();
     cy.visit(site1.qa)
