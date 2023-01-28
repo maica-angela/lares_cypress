@@ -22,6 +22,8 @@ export function searchCertReg() {
 
     cy.wait(5000);
     lraTransaction();
+    
+    cy.contains('Okay').click();
   // cy.xpath(testdata.okay).click();
 
 }
