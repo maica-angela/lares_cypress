@@ -18,16 +18,14 @@ export function lraTransaction() {
     cy.xpath(testdata.remarks).type('test');
     cy.get('input[type="file"]').selectFile(fileUpload).trigger('input');
     //  cy.get('input[type="submit"]').click({force: true});
-    // cy.get('#uploaded-files').contains('How Democracies Die - Steven Levitsky.pdf');
-   // cy.intercept({
-  //      method: 'POST',
-  //      url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-transaction',
-  //      //  middleware: true
- //   }).as('submitLRA');
+    //cy.get('#uploaded-files').contains('How Democracies Die - Steven Levitsky.pdf');
+    cy.intercept({
+        method: 'POST',
+        url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-transaction',
+        //  middleware: true
+    }).as('submitLRA');
     cy.xpath(testdata.submit).click();
-
     cy.wait('@submitLRA', { timeout: 100000 });
-
     cy.contains('Okay').click();
 
 

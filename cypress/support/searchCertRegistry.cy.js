@@ -14,9 +14,9 @@ export function searchCertRegPage() {
   cy.xpath(testdata.a).click({ force: true });
   cy.get('span.multiselect__option').eq(1).should('have.text', 'Search').click({ force: true });
   cy.xpath(testdata.find).click({ force: true });
-  cy.wait(5000);
+  cy.wait(2000);
   cy.xpath(testdata.firstView).click({ force: true });
-  cy.wait(3000);
+  cy.wait(5000);
 
 }
 

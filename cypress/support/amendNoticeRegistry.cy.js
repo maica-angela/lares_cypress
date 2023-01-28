@@ -10,18 +10,16 @@ export function amendNoticeReg() {
     cy.xpath(testdata.searchRegistry).click();
 
     cy.xpath(testdata.amend).click({ force: true });
-    // cy.xpath(testdata.clickAmend).click({ force: true });
+    cy.wait(5000);
     cy.contains('Proceed').click();
-    //  cy.contains('Amend').click();
     //add creditor
     cy.xpath(testdata.cardheader1).click();
     cy.contains('Add Creditor').click();
-    cy.wait(3000);
-    cy.xpath(testdata.j).type('test123');
+    cy.xpath(testdata.j).type('test1234');
     cy.xpath(testdata.k).type('123');
-    cy.xpath(testdata.l).type('test123');
-    cy.xpath(testdata.m).type('test123');
-    cy.xpath(testdata.n).type('test123');
+    cy.xpath(testdata.l).type('test1234');
+    cy.xpath(testdata.m).type('test1234');
+    cy.xpath(testdata.n).type('test1234');
     cy.xpath(testdata.o).type('maica.urlanda@bcstechnology.com');
     cy.xpath(testdata.p).type('09169227894');
     cy.xpath(testdata.q).type('123456');
@@ -29,12 +27,10 @@ export function amendNoticeReg() {
         .click({ force: true });
     cy.contains('Valid')
         .click({ force: true });
-
     cy.xpath(testdata.provinceGrantor)
         .click({ force: true });
     cy.contains('Bulacan')
         .click({ force: true });
-
     cy.xpath(testdata.townGrantor)
         .click({ force: true });
     cy.contains('San Miguel')
@@ -54,7 +50,7 @@ export function amendNoticeReg() {
     cy.contains('I acknowledge that the information provided is true and correct and I/We agree to the Terms and Conditions and Privacy Policy set by this Registry.')
         .click();
     cy.xpath(testdata.confirm1).click();
-    cy.wait(3000);
+    cy.wait(2000);
 
     lraTransaction();
     terminateNoticeReg();
