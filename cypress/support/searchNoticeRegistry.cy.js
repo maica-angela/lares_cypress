@@ -1,11 +1,10 @@
 import { lraTransaction } from "./lraTransactionProcess.cy";
-import { searchCertReg } from "./searchCertRegistry.cy";
+import { searchCertReg } from "./searchCertReg.cy";
 
 
 export function searchNoticeReg() {
 
     const testdata = new testData();
-
     cy.contains('Search the Registry').click();
     cy.contains('Proceed').click();
     //search by grantor, Individual
@@ -17,38 +16,24 @@ export function searchNoticeReg() {
         .click({ force: true });
     cy.contains('SSS')
         .click({ force: true });
-
     cy.xpath(testdata.search).click();
+    cy.wait(3000);
     lraTransaction();
-    // cy.xpath(testdata.okay).click();
-
-    //--
-
-
-    //--
-    //  cy.xpath(testdata.okay).click();
-
+    //search by Notice Registration
+    //  cy.contains('Search the Registry').click();
+    cy.contains('Search Notice').click();
+    cy.contains('Proceed').click();
+    cy.xpath(testdata.e).click();
+    cy.xpath(testdata.f).type('N230100019982');
+    cy.xpath(testdata.searchReg).click({ timeout: 10000 });
+    lraTransaction();
     //search by collateral details, Motor Vehicle
     cy.contains('Search Notice').click();
     cy.contains('Proceed').click();
     cy.xpath(testdata.g).click();
     cy.xpath(testdata.h).type('chassis1');
     cy.xpath(testdata.searchCol).click();
-    cy.wait(5000);
-    lraTransaction();
-    // cy.xpath(testdata.okay).click();
-
-    
-    //search by Notice Registration
-    //  cy.contains('Search the Registry').click();
-    cy.contains('Proceed').click();
-    cy.contains('Search Notice').click();
-    //  cy.contains('Proceed').click();
-    cy.xpath(testdata.e).click();
-
-    cy.xpath(testdata.f).type('N230100019982');
-    cy.xpath(testdata.searchReg).click({ timeout: 10000 });
-
+    cy.wait(3000);
     lraTransaction();
 
     searchCertReg();

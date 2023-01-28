@@ -61,11 +61,12 @@ export function amendNoticeReg() {
 class testData {
 
 
+    searchRegistry = '//*[@id="__layout"]/section/main/div/div/div[2]/div/div/div[2]/div/div[3]/a/span[6]/div/a';
     okayAmend = '//*[@id="modalNoticePostSubmit___BV_modal_body_"]/div[2]/button';
     endDate = '//*[@id="sectionTransactions"]/div/div[3]/form/div/div[2]/div/div[1]/div/input';
     confirm1 = '//*[@id="modalSummary___BV_modal_body_"]/div[2]/div/button/span';
     firstView = '//*[@id="__layout"]/section/main/div/div/div[2]/div/div/div[2]/div/div[2]/a/span[6]/div/a';
-    searchRegistry = '//*[@id="__layout"]/section/main/div/ul/li[2]/a';
+    // searchRegistry = '//*[@id="__layout"]/section/main/div/ul/li[2]/a';
     find = '//*[@id="__layout"]/section/main/div/div/div[1]/form/div[2]/div[3]/div/div/button';
 
     amend = '//*[@id="result-collapse"]/div/div/div[2]/span[7]/a[2]';
