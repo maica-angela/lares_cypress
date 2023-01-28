@@ -19,6 +19,8 @@ export function searchNoticeReg() {
     cy.xpath(testdata.search).click();
     cy.wait(3000);
     lraTransaction();
+    cy.contains('Okay').click();
+
     //search by Notice Registration
     //  cy.contains('Search the Registry').click();
     cy.contains('Search Notice').click();
@@ -26,7 +28,10 @@ export function searchNoticeReg() {
     cy.xpath(testdata.e).click();
     cy.xpath(testdata.f).type('N230100019982');
     cy.xpath(testdata.searchReg).click({ timeout: 10000 });
+    cy.wait(3000);
     lraTransaction();
+    cy.contains('Okay').click();
+
     //search by collateral details, Motor Vehicle
     cy.contains('Search Notice').click();
     cy.contains('Proceed').click();
@@ -35,6 +40,14 @@ export function searchNoticeReg() {
     cy.xpath(testdata.searchCol).click();
     cy.wait(3000);
     lraTransaction();
+    cy.intercept({
+        method: 'POST',
+        url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-transaction',
+        //  middleware: true
+    }).as('submitLRA');
+    cy.wait('@submitLRA', { timeout: 80000 });
+    cy.contains('Okay').click();
+   
 
     searchCertReg();
 }

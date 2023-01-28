@@ -5,8 +5,8 @@ import { searchCertReg } from "./searchCertReg.cy";
 export function searchCertRegPage() {
   const testdata = new testData();
 
-  cy.contains('Search the Registry').click();
-  cy.contains('Proceed').click();
+ //cy.contains('Search the Registry').click();
+ // cy.contains('Proceed').click();
   cy.contains('Transaction History').click();
   cy.xpath(testdata.searchRegistry).click();
   cy.xpath(testdata.b).click({ force: true });

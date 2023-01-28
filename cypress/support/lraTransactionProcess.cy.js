@@ -21,12 +21,12 @@ export function lraTransaction() {
     //cy.get('#uploaded-files').contains('How Democracies Die - Steven Levitsky.pdf');
     cy.intercept({
         method: 'POST',
-        url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-transaction',
+        url: 'https://api.personalpropertyregistry.lra.gov.ph/qa/lares/ppsa/notices/search-certification',
         //  middleware: true
     }).as('submitLRA');
     cy.xpath(testdata.submit).click();
     cy.wait('@submitLRA', { timeout: 80000 });
-    cy.contains('Okay').click();
+    
 
 
     //  cy.intercept({
