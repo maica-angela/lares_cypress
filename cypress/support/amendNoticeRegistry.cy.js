@@ -7,29 +7,7 @@ export function amendNoticeReg() {
     searchCertRegPage();
     const testdata = new testData();
     const dayjs = require('dayjs');
-
-   
-    //search by Notice Registration
-    cy.contains('Search the Registry').click();
-    cy.contains('Proceed').click();
-    cy.contains('Search Notice').click();
-    //  cy.contains('Proceed').click();
-    cy.xpath(testdata.e).click();
-
-    cy.xpath(testdata.f).type('N221100000019');
-    cy.xpath(testdata.searchReg).click({ timeout: 10000});
-
-    lraTransaction();
-
-
-
-  //  cy.contains('Search the Registry').click();
-   // cy.contains('Proceed').click();
-  //  cy.contains('Transaction History').click();
     cy.xpath(testdata.searchRegistry).click();
-
- //   cy.xpath(testdata.firstView).click({ force: true });
- //   cy.wait(5000);//
 
     cy.xpath(testdata.amend).click({ force: true });
     // cy.xpath(testdata.clickAmend).click({ force: true });
