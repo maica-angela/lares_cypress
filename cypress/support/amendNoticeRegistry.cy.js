@@ -19,11 +19,6 @@ export function amendNoticeReg() {
 
     lraTransaction();
 
-
-
-  //  cy.contains('Search the Registry').click();
-   // cy.contains('Proceed').click();
-  //  cy.contains('Transaction History').click();
     cy.xpath(testdata.searchRegistry).click();
 
     cy.xpath(testdata.process).click({ force: true });
