@@ -7,30 +7,15 @@ export function searchCertPublic() {
     // cy.contains('Proceed').click();
     //  cy.contains('Transaction History').click();
 
-    cy.xpath(testdata.searchRegistry).click();
-
-    cy.xpath(testdata.b).click({ force: true });
-    cy.contains('Processed').click();
-
-    cy.wait(5000);
-
-    cy.xpath(testdata.a).click({ force: true });
-    cy.get('span.multiselect__option').eq(1).should('have.text', 'Search').click({ force: true });
-    cy.xpath(testdata.find).click({ force: true });
-
-    cy.xpath(testdata.firstView).click({ force: true });
-    cy.wait(3000);
-
+    searchCertRegPage();
     cy.contains('Certification of Search Results').click();
     cy.wait(3000);
-
     cy.contains('Add Email Recipient').click();
     cy.xpath(testdata.contactName).type('maica');
     cy.xpath(testdata.emailAddress).type('maica.urlanda@bcstechnology.com.au');
     cy.xpath(testdata.mobNumber).type('9169227896');
     cy.contains('Save').click();
     cy.wait(2000);
-
     cy.contains('Submit').click();
     cy.wait(5000);
 

@@ -25,7 +25,7 @@ export function lraTransaction() {
         //  middleware: true
     }).as('submitLRA');
     cy.xpath(testdata.submit).click();
-    cy.wait('@submitLRA', { timeout: 100000 });
+    cy.wait('@submitLRA', { timeout: 50000 });
     cy.contains('Okay').click();
 
 

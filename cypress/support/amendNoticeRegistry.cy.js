@@ -40,10 +40,11 @@ export function amendNoticeReg() {
 
     cy.xpath(testdata.cardheader3).click();
 
-    cy.xpath(testdata.endDate).clear()
+    cy.xpath(testdata.endDate).clear();
     cy.wait(1000);
-    cy.log(dayjs().format('YYYY/MM/DD'))
-    cy.xpath(testdata.endDate).type(dayjs().format('YYYY/MM/DD'));
+    //  cy.log(dayjs().format('YYYY/MM/DD'))
+    //  cy.xpath(testdata.endDate).type(dayjs().format('YYYY/MM/DD'));
+    cy.xpath(testdata.endDate, { timeout: 3000 }).should('be.visible').type('20231231');
     cy.wait(3000);
     cy.contains('I confirm that a signed security agreement is in place.').click();
     cy.contains('Submit').click();
