@@ -1,14 +1,14 @@
+import { amendNoticeReg } from "./amendNoticeRegistry.cy";
 import { lraTransaction } from "./lraTransactionProcess.cy";
+import { searchCertReg } from "./searchCertReg.cy";
 
-export function searchCertReg() {
+export function searchCertRegPage() {
     const testdata = new testData();
 
-    // cy.contains('Search the Registry').click();
-    //  cy.contains('Proceed').click();
-    // cy.contains('Transaction History').click();
-
+     cy.contains('Search the Registry').click();
+     cy.contains('Proceed').click();
+     cy.contains('Transaction History').click();
     cy.xpath(testdata.searchRegistry).click();
-
     cy.xpath(testdata.b).click({ force: true });
     cy.contains('Processed').click();
     cy.wait(5000);
@@ -18,21 +18,7 @@ export function searchCertReg() {
 
     cy.xpath(testdata.firstView).click({ force: true });
     cy.wait(3000);
-
-    cy.contains('Certification of Search Results').click();
-    cy.wait(3000);
-    cy.contains('Add Email Recipient').click();
-    cy.xpath(testdata.contactName).type('maica');
-    cy.xpath(testdata.emailAddress).type('maica.urlanda@bcstechnology.com.au');
-    cy.xpath(testdata.mobNumber).type('9169227896');
-    cy.contains('Save').click();
-    cy.wait(2000);
-    cy.contains('Submit').click();
-
-    cy.wait(5000);
-    lraTransaction();
-  // cy.xpath(testdata.okay).click();
-
+   
 }
 
 class testData {
