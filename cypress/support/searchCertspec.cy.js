@@ -1,4 +1,5 @@
 import { successPayment } from "./payment.cy";
+import { searchCertRegPage } from "./searchCertRegistry.cy";
 
 export function searchCertPublic() {
 
